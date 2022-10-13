@@ -1,22 +1,31 @@
 let servants = [{
-  name :'Arjuna', 
-  alignment : 'lawful evil'
+  name :"Arjuna", 
+  alignment : "lawful evil"
 }, {
-  name: 'Karna',
-  alignment: 'lawful good'
+  name: "Karna",
+  alignment: "lawful good"
 } ,{
-  name:'Kama', 
-  alignment :'chaotic evil'
+  name:"Kama", 
+  alignment :"chaotic evil"
 }, {
-  name :'Oberon',
-  alignment:'chaotic evil'
+  name :"Oberon",
+  alignment:"chaotic evil"
 }];
-function setup() {
-  createCanvas(400, 400);
 
-  console.log(servants[1]);
+let randomIndex;
+
+function setup(){
+createCanvas(600,600);
+background(200);
 }
 
 function draw() {
-  background(220);
+
+}
+
+function mousePressed(){
+  background(random(200,255));
+  randomIndex = int(random(servants.length));
+  text(servants[randomIndex].name, 50, 50);
+  servants.splice(randomIndex,1);
 }
