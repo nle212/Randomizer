@@ -18,6 +18,8 @@ function setup(){
 createCanvas(600,600);
 background(200);
 textSize(50);
+text("Click to protect", 100,150); 
+text("the humanity!", 100,200);
 
 }
 
@@ -33,6 +35,6 @@ function mousePressed(){
   servants.splice(randomIndex,1);
 } else{
   background(random(200,250));
-  text("Lostbelt Completed!", 150,200);
+  text("Lostbelt Completed!", 80, 300);
 }
 }
