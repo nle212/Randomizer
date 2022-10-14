@@ -17,6 +17,8 @@ let randomIndex;
 function setup(){
 createCanvas(600,600);
 background(200);
+textSize(50);
+
 }
 
 function draw() {
@@ -27,7 +29,10 @@ function mousePressed(){
   if (servants[0]){
   background(random(200,255));
   randomIndex = int(random(servants.length));
-  text(servants[randomIndex].name, 50, 50);
+  text(servants[randomIndex].name, 200, 200);
   servants.splice(randomIndex,1);
+} else{
+  background(random(200,250));
+  text("Lostbelt Completed!", 150,200);
 }
 }
